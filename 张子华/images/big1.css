@@ -1,0 +1,481 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    color: black;
+}
+html{
+    position: relative;
+}
+body{
+	background-image: url(bg.jpg) ;
+    background-size: 100%;
+    
+}
+
+.bi{
+    position: fixed;; 
+    width:100%;
+    height: 100px;
+    background-color: rgba(255,255, 255, 0.8);
+    z-index: 4;
+}
+.nav{
+    position: absolute; 
+    z-index: 4;
+    top:0px;
+    left:50%;
+    transform:translateX(-50%);
+    width: 1200px;
+    height:80px;
+    margin:0 auto;
+    padding-top:20px;
+    /* padding-left: 40px; */
+}
+.nav>img{
+    padding-right:20px ;
+}
+.nav>a{
+    display: inline-block;
+    cursor:pointer;
+    width: 150px;
+    height:50px;
+    text-align: center;
+    position: relative;
+}
+.nav>a>p{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:3;
+}
+.haha{
+    position:absolute;
+    width:75px;
+    height:50px;
+    overflow:hidden;
+    left:0px;
+    top:0px;
+    z-index:1;            
+}
+.xixi{
+    position:absolute;
+    width:75px;
+    height:50px;
+    overflow:hidden;
+    right:0px;
+    top:0px;
+    z-index:1;  
+}
+.haha>div{
+    width:90px;
+    height:50px;
+    background-color: skyblue;
+    border-top-left-radius: 2em 2em;
+    border-bottom-left-radius: 2em 2em;
+    position:absolute;
+    left:90px;
+}
+.xixi>div{
+    width:90px;
+    height:50px;
+    background-color: skyblue;
+    border-top-right-radius: 2em 2em;
+    border-bottom-right-radius: 2em 2em;
+    position:absolute;
+    right:90px;
+}
+.big>span{
+    color:white;
+    display: block;
+    cursor:pointer;
+    width:30px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    text-align: center;
+    background:rgb(145, 142, 142);
+    opacity: 0;
+}
+#left{
+    left:30px;
+}
+#right{
+    right:30px;
+}
+.big{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:1400px;
+    height: 500px;
+    overflow: hidden;
+    border-top-left-radius: 3em 3em;
+    border-bottom-left-radius:  3em 3em;
+    border-top-right-radius: 3em 3em;
+    border-bottom-right-radius: 3em 3em;
+}
+.morebig{
+    position: relative;
+    width:100%;
+    height: 500px;
+    padding-top: 100px;
+}
+.slide{
+    width:1400px;
+    height: 500px;
+    position: relative;
+}
+.slider{
+    width:1400px;
+    position: absolute;
+    overflow: hidden;
+}
+.num{
+    text-align:center;
+    position:absolute;
+    bottom:5px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.num>li{
+    line-height: 20px;
+    font-size: 10px;
+    display: inline-block;
+    width:20px;
+    height:20px;
+    margin-left:10px;
+    background:rgb(202, 202, 202);
+    border-radius:10px;
+    cursor:pointer;
+}
+.num>li:first-child{
+    margin-left:0px;
+    color:red;
+}
+#ha{
+    background: skyblue;
+}
+.text1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    color: slategray;
+    opacity: 0.8;
+    text-align: center;
+}
+.text1>span{
+    color: rgb(90, 192, 233);
+    opacity: 1;
+    font-weight: bold;
+}
+.route{
+    z-index: 2;
+    height: 530px;
+    width: 100%;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1400px;
+    border-bottom:1px solid slategray;
+}
+.route>div:first-child{
+    margin-left: 0px;
+}
+.route>div>p{
+    display: inline-block;
+    color: slategray;
+    margin-bottom: 20px;
+}
+ .route>div>h3{
+    color: rgb(53, 180, 230);
+}
+.route>div{
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    float: left;
+    margin-left: 25px;
+}
+.more{
+    background-color: rgb(62, 158, 196);
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    border-top-left-radius: 1.8em 1.8em;
+    border-bottom-left-radius:  1.8em 1.8em;
+    border-top-right-radius: 1.8em 1.8em;
+    border-bottom-right-radius: 1.8em 1.8em;
+}
+.route>div>img{
+    border-top-left-radius: 1.8em 1.8em;
+    border-bottom-left-radius:  1.8em 1.8em;
+    border-top-right-radius: 1.8em 1.8em;
+    border-bottom-right-radius: 1.8em 1.8em;
+}
+.more>p{
+    padding-top: 10px;
+    color: white;
+}
+.upabout{
+    z-index: 1;
+    margin-top: 15px;
+    position: relative;
+    height: 450px;
+    width: 100%;
+}
+.about{
+    padding-left: 60px;
+    position:absolute;
+    top:530px;
+    width:1300px;
+    height: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px slategrey solid;
+}
+.about>div>div>div>img{
+    width:600px;
+    height: 430px;
+    display: inline-block;
+}
+.about>div{
+    float: left;
+    position: relative;
+}
+.help{
+    position: absolute;
+    top:0px;
+    width: 600px;
+    height: 430px;
+    display: inline-block;
+    float: left;
+}
+.help>div{
+    float: left;
+}
+.about>div:last-child{
+    position: absolute;
+    top:20px;
+    padding-left: 50px;
+    display: inline-block;
+}
+.about>div>h2{
+   color: skyblue;
+}
+.about>div>h2>span{
+   color: slategray;
+}
+.about>div>p{
+   color: slategrey;
+   margin-bottom: 30px;
+}
+.nouse{
+   position: relative;
+}
+.use{
+   position: absolute;
+   top:600px;
+   left:50%;
+   transform: translateX(-50%);
+}
+.use>h2{
+   color:slategrey;
+   text-align: center;
+}
+.use>h2>span{
+   color:skyblue;
+}
+.use>p{
+   text-align: center;
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+.use>div{
+   width:1300px;
+}
+.imag{
+   height: 450px;
+}
+.imag>div{
+   display: inline-block;
+   float:left;
+   margin-left: 25px;
+   margin-bottom: 20px;
+   width: 300px;
+   height: 200px;
+   cursor: pointer;
+   overflow: hidden;
+   position: relative;
+}
+.lef{
+   position: absolute;
+   background-color: rgba(103, 123, 133, 0.8);
+   left:0px;
+   top:-100px;
+   width:300px;
+   height: 120px;
+   opacity: 0;
+
+    border-bottom-left-radius:  1.8em 1.8em;
+
+    border-bottom-right-radius: 1.8em 1.8em;
+}
+.rig{
+   position: absolute;
+   background-color:  rgba(103, 123, 133, 0.8);
+   left:0px;
+   bottom:-100px;
+   width:300px;
+   height: 120px;
+   opacity: 0;
+
+    border-top-left-radius:  1.8em 1.8em;
+    border-top-right-radius: 1.8em 1.8em;
+}
+.lef>p{
+   font-size: 25px;
+   color:black;
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-50%,-50%);
+}
+.rig>p{
+   font-size: 25px;
+   color:black;
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-50%,-50%);
+}
+.lef>img{
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-50%,-50%);
+}
+.rig>img{
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-50%,-50%);
+}
+.guide{
+    position: relative;
+    height: 1000px;
+    width: 1300px;
+    overflow: hidden;
+}
+
+.travel{
+   padding-top: 50px;
+   width: 1200px;
+   height: 250px;
+   border-bottom: 1px dashed slategrey;
+   cursor: pointer;
+   position: absolute;
+   left: 1400px;
+   
+}
+.travel>div>img{
+   display: inline-block;
+   /* float: left; */
+   width: 250px;
+   height:200px;
+   position:absolute;
+   
+}
+.psycho{
+    border-top-left-radius: 1em 1em;
+    border-bottom-left-radius:  1em 1em;
+    border-top-right-radius: 1em 1em;
+    border-bottom-right-radius: 1em 1em;
+}
+.travel>div:first-child{
+   cursor: pointer;
+   display: inline-block;
+   float: left;
+   margin-left: 60px;
+   width: 250px;
+   height:200px;
+   overflow: hidden;
+   position: relative;
+}
+.travel>div:last-child{
+   display: inline-block;
+   float: left;
+   margin-left: 60px;
+   margin-top: 40px;
+}
+.mo{
+
+   margin-top: 30px;
+   background-color: white;
+   width:100px;
+   height:40px;
+   border:1px slategrey solid;
+   position: relative;
+   cursor: pointer;
+   box-shadow: 5px 5px 5px 5px rgba(26, 151, 182, 0.5), 10px 10px 10px 10px rgba(255,255,255,0.5) ;
+}
+.mo>p{
+    
+   position: absolute;
+   top:50%;
+   transform: translateY(-50%);
+   left:25px;
+}
+.jian{
+   background-color: skyblue;
+   position: absolute;
+   width:30px;
+   height: 35px;
+   right: 0px;
+   color: snow;
+   text-align: center;
+   font-weight:bolder;
+   font-size: 20px;
+   padding-top: 5px;
+   opacity: 0;
+}
+.nav4{
+    position: absolute;
+    top:3250px;
+    width: 100%;
+    height: 200px;
+    background-image: url(bottom.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+.bottom{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    position: absolute;
+}
+.bottom>ul{
+    width: 480px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+}
+.bottom>ul>li{
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    width: 80px;
+    height: 50px;
+    float: left;
+}

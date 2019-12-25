@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .bigger{
+            background-color: black;
+            width: 1400px;
+            height: 480px;
+            position: relative;
+            overflow: hidden;
+        }
+        .one>div{
+            width: 350px;
+            height: 480px;
+            position: absolute;
+            display: inline-block;
+            overflow: hidden;
+            top:0px;
+        }
+        .one>div>img{
+            position: absolute;
+        }
+        .two{
+            position: absolute;
+            left: 1400px;
+        }
+        .three{
+            position: absolute;
+            left: 1400px;
+        }
+        .dian{
+            width: 200px;
+            height: 100px;
+            background-color: cadetblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="bigger">
+        <div class="one">
+            <div style="left: 0px;"><img style="left: 0px;" src="b1.jpg" alt=""></div>
+            <div style="left: 350px;"><img style="left: -350px;" src="b1.jpg" alt=""></div>
+            <div style="left: 700px;"><img style="left: -700px;" src="b1.jpg" alt=""></div>
+            <div style="left: 1050px;"><img style="left: -1050px;" src="b1.jpg" alt=""></div>
+        </div>
+        <div class="two">
+            <img src="b2.jpg" alt="">
+        </div>
+        <div class="three">
+            <div><img src="b3.jpg" alt=""></div>
+            <div><img src="b3.jpg" alt=""></div>
+            <div><img src="b3.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="dian">
+        点击
+    </div>
+</body>
+<script>
+    function getStyle(obj, attr){
+        if(obj.currentStyle){
+            return obj.currentStyle[attr];
+        } else {
+            return getComputedStyle(obj, null)[attr];
+        }
+    }
+    function animate(obj,json,callback){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+            var isStop = true;
+            for(var attr in json){
+                var now = 0;
+                if(attr == 'opacity'){
+                    now = parseInt(getStyle(obj,attr)*100);
+                }else{
+                    now = parseInt(getStyle(obj,attr));
+                }
+                var speed = (json[attr] - now) / 10;
+                speed = speed>0?Math.ceil(speed):Math.floor(speed);
+                var cur = now + speed;
+                if(attr == 'opacity'){
+                    obj.style[attr] = cur / 100;
+                }else{
+                    obj.style[attr] = cur + 'px';
+                }
+                if(json[attr] !== cur){
+                    isStop = false;
+                }
+            }
+            if(isStop){
+                clearInterval(obj.timer);
+                callback&&callback();
+            }
+        }, 30)
+    }  
+
+    var bigger = document.getElementsByClassName("bigger");
+    var one=document.getElementsByClassName("one");
+    var dian = document.getElementsByClassName("dian");
+    function dong(){
+        console.log("12312");
+        animate(one[0].children[0],{top:-480});
+        
+        var timer = setInterval(
+            function(){
+                if(parseInt(getStyle(one[0].children[0],"top"))<-100){
+                    animate(one[0].children[1],{top:-480});
+                    console.log(123);
+                }
+                if(parseInt(getStyle(one[0].children[0],"top"))<-200){
+                    animate(one[0].children[2],{top:-480});
+                }
+                if(parseInt(getStyle(one[0].children[0],"top"))<-300){
+                    animate(one[0].children[3],{top:-480});
+                    clearInterval(timer);
+                }
+            },100
+        )
+    }
+    dian[0].onclick=dong;
+</script>
+</html>
