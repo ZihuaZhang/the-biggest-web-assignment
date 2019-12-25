@@ -1,0 +1,291 @@
+/*
+* @Author: admin
+* @Date:   2019-12-19 21:10:11
+* @Last Modified by:   admin
+* @Last Modified time: 2019-12-24 20:07:21
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+	background-image: url(bg.jpg);
+	background-size: 100%;
+}
+a{
+	color: black;
+}
+
+.all{
+	width: 100%;
+	height: 1750px;
+	position: relative;
+	text-align: center;
+}
+
+.big{
+	width: 100%;
+	height: 100px;
+	background-color: rgba(255,255, 255, 0.5);
+	position: fixed;
+	top: 0;
+	margin: 0 auto;
+	z-index: 10;
+}
+.nav>img{
+	position: absolute;
+	left:70px;
+}
+.nav{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width: 1200px;
+    height:80px;
+    margin:0 auto;
+    padding-top:25px;
+	text-align: center;
+	padding-left: 130px;
+}
+.nav>a{
+    display: inline-block;
+    cursor:pointer;
+    width: 150px;
+    height:50px;
+    text-align: center;
+    position: relative;
+}
+.nav>a>p{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:3;
+}
+.haha{
+    position:absolute;
+    width:75px;
+    height:50px;
+    overflow:hidden;
+    left:1px;
+    top:0px;
+    z-index:1;            
+}
+.xixi{
+    position:absolute;
+    width:75px;
+    height:50px;
+    overflow:hidden;
+    right:1px;
+    top:0px;
+    z-index:1;  
+}
+.haha>div{
+    width:90px;
+    height:50px;
+    background-color: skyblue;
+    border-top-left-radius: 2em 2em;
+    border-bottom-left-radius: 2em 2em;
+    position:absolute;
+    left:90px;
+}
+.xixi>div{
+    width:90px;
+    height:50px;
+    background-color: skyblue;
+    border-top-right-radius: 2em 2em;
+    border-bottom-right-radius: 2em 2em;
+    position:absolute;
+    right:90px;
+}
+
+
+
+.shang{
+	position: fixed;
+	top: 0;
+	left: 50%;
+    transform:translateX(-50%);
+	height: 500px;
+	width: 1200px;
+	padding-left: 220px;
+	overflow: hidden;
+	margin: 0 auto;
+	
+	
+}
+
+
+.boxx{
+	width: 300px;
+	height: 600px;
+	padding: 0 20px;
+	border: 2px solid #1688ea;
+	margin: 50px auto;
+	position: relative;
+	left: 330px;
+}
+.tit{
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+.brand{
+	color: #1688ea;
+	font-size: 18px;
+	margin-right: 20px;
+}
+.inp{
+	width: 100%;
+	height: 40px;
+	text-indent: 8px;
+}
+.notice{
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+}
+
+.code{
+	width: 60%;
+}
+.getCode{
+	width: 35%;
+	height: 44px;
+	float: right;
+	border: none;
+	background-color: #eee;
+}
+.codeImg{
+	height: 40px;
+}
+.btn{
+	background: #1688ea;
+	width: 100%;
+	height: 40px;
+	border: none;
+	margin-top: 8px;
+	color: #fff;
+	border-radius: 3px;
+}
+
+.zhong{
+	position: relative;
+	width: 1200px;
+	height: 360px;
+	margin: 100px auto;
+	margin-top:180px;
+}
+.gedi{
+	position: relative;
+	top: 180px;
+}
+
+.zuotu{
+	width: 480px;
+	height: 400px;
+	padding: 0 20px;
+	margin: 0 auto;
+	position: absolute;
+	left: 50px;
+	top: 100px;
+
+}
+.dibu{
+	position:fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 1000px;
+	height: 90px;
+	margin: 100px auto;
+	overflow: hidden;
+	margin:auto;
+}
+
+
+
+ul,li{
+	list-style: none;
+	float: left;
+}
+.box{
+	position: relative;
+	top: 200px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 1000px;
+	height: 360px;
+	margin: 100px auto;
+	overflow: hidden;
+	margin:auto;
+
+}
+.slider{
+	width: 100000px;
+	height: 300px;
+	overflow: hidden;
+	position: absolute;
+	left: -12500px;
+}
+.slide{
+	width: 500px;
+	height: 350px;
+	overflow: hidden;
+	float: left;
+	padding-left: 30px;
+	margin: 0 auto;
+}
+
+
+.wrap {
+	top: 100px;
+	position: relative;
+	height: 360px;
+	margin: 0 auto;
+}
+.content {
+	position: relative;
+	left: 160px;
+	width: 1200px;
+	height: 360px;
+	margin: auto;
+}
+.content li{
+	position: absolute;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.nav4{
+    position: absolute;
+    top:1700px;
+    width: 100%;
+    height: 200px;
+    background-image: url(bottom.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+.bottom{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    position: absolute;
+}
+.bottom>ul{
+    width: 480px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+}
+.bottom>ul>li{
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    width: 80px;
+    height: 50px;
+    float: left;
+}
