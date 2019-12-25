@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>旅游攻略</title>
+		<style>
+			body{
+				background-image: url(bg.jpg) ;
+				background-size: 100%;
+				
+			}
+			a{
+				color: black;
+			}
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.first{
+				width: 100%;
+				height: 100px;
+			}
+			.big{
+				width: 1920px;
+				height: 100px;
+				background-color: rgba(255,255, 255, 0.85);
+				z-index: 20;
+				position: fixed;
+				top: 0;
+				left:50%;
+				transform: translateX(-50%);
+			}
+			.tip{
+				position: fixed;
+				top: 0;
+            	left:50%;
+            	transform:translateX(-50%);
+           		width: 1200px;
+            	height:80px;
+            	margin:0 auto;
+            	padding-top:20px;
+            	background-color: rgba(255,255, 255, 0.5);
+        	}
+        	.tip>a{
+            	display: inline-block;
+            	cursor:pointer;
+            	width: 150px;
+            	height:50px;
+            	text-align: center;
+            	position: relative;
+        	}
+        	.tip>a>p{
+            	position:absolute;
+            	top:50%;
+            	left:50%;
+            	transform:translate(-50%,-50%);
+            	z-index:3;
+       		}
+        	.haha{
+            	position:absolute;
+            	width:75px;
+            	height:50px;
+            	overflow:hidden;
+            	left:0px;
+            	top:0px;
+            	z-index:1;            
+        	}
+        	.xixi{
+            	position:absolute;
+            	width:75px;
+            	height:50px;
+            	overflow:hidden;
+            	right:0px;
+           		top:0px;
+            	z-index:1;  
+        	}
+        	.haha>div{
+            	width:90px;
+            	height:50px;
+            	background-color: skyblue;
+            	border-top-left-radius: 2em 2em;
+            	border-bottom-left-radius: 2em 2em;
+            	position:absolute;
+            	left:90px;
+        	}
+        	.xixi>div{
+        	    width:90px;
+            	height:50px;
+            	background-color: skyblue;
+            	border-top-right-radius: 2em 2em;
+            	border-bottom-right-radius: 2em 2em;
+            	position:absolute;
+            	right:90px;
+        	}
+   			.nav-01{
+				width: 100%;	
+				height: 428px;
+				overflow: hidden;
+			}
+			.nav-01>img{
+				display: block;
+				width: 1920px;
+				height: 428px;
+				margin: 0 auto;
+			}
+			.nav01{
+				width: 100%;
+				height: 100px;
+			}
+			.nav1{
+				width: 1200px;
+				height: 100px;
+				margin: 0 auto;
+				font-size: 28px;
+				position: relative;
+			}
+			.nav3{
+				width: 100%;
+				height: 150px;
+				margin-bottom: 10px;
+			}
+			.nav11{
+				width: 1200px;
+				height: 150px;
+				position: relative;
+				left: 50%;
+				top: 0;
+				transform: translateX(-50%);
+				overflow: hidden;
+				border: 2px dashed rgba(50, 50, 50, 0.7);
+			}
+			.nav11>.tu{
+				width: 3000px;
+				height: 150px;
+				position: absolute;
+				left: 0px;
+			}
+			.tu>div{
+				width: 250px;
+				height: 150px;
+				float: left;
+				margin: 0 20px;
+			}
+			.tu>div>img{
+				display: block;
+				width: 250px;
+				height: 150px;
+			}
+			.nav1>.title1{
+				width: 140px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				position: absolute;
+				top: 25px;
+				left: 460px;
+			}
+			.nav1>.title2{
+				width: 220px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				position: absolute;
+				right: 380px;
+				top: 25px;
+				color: gray;
+			}
+			.nav2{
+				width: 100%;
+				height: 1206px;
+			}
+			.move{
+				width: 1200px;
+				height: 200px;
+				margin: 0 auto;
+				position: relative;
+				border-bottom-width: 1px;
+				border-bottom-style: dashed;
+				border-bottom-color: gray;
+				overflow: hidden;
+			}
+			.data{
+				width: 1200px;
+				height: 200px;
+				margin: 0 auto;
+				position: absolute;
+			}
+			.simg{
+				width: 250px;
+				height: 150px;
+				position: absolute;
+				top: 25px;
+				left: 10px;
+				overflow: hidden;
+			}
+			.simg>img{
+				display: block;
+				width: 250px;
+				height: 150px;
+			}
+			.simg0{
+				width: 250px;
+				height: 75px;
+				position: absolute;
+				top: -75px;
+				left: 0;
+				text-align: center;
+				line-height: 75px;
+				background-color: rgb(0, 0, 0,0.25);
+				border-bottom-left-radius: 2em; 
+				border-bottom-right-radius: 2em; 
+			}
+			.simg1{
+				width: 250px;
+				height: 75px;
+				position: absolute;
+				left: 0;
+				top: 150px;
+				text-align: center;
+				line-height: 75px;
+				border-top-left-radius: 2em; 
+				border-top-right-radius: 2em; 
+				background-color: rgb(0, 0, 0,0.25);
+			}
+			.place{
+				width:150px;
+				height:30px;
+				position: absolute;
+				left:320px;top:5px;
+				font-size: 25px;
+				color: #1dbfdb;
+				text-decoration: none;
+			}
+			.place>a{
+				color: #1dbfdb;
+				text-decoration: none;
+				display: block;
+				width: 130px;
+				height: 30px;
+				line-height: 30px;
+				text-align: left;
+			}
+			.way{
+				width:600px;
+				height:20px;
+				position:absolute;
+				left:320px;
+				top:40px;
+				font-size:13px;
+			}
+			.way>a{
+				color:gray;
+				text-decoration: none;
+				display: block;
+				width: 600px;
+				height: 30px;
+				line-height: 30px;
+				text-align: left;
+			}
+			.float{
+				height:30px;
+				width:100px;
+				line-height:30px;
+				border:1px solid rgb(102,102,102,0.5);
+				box-shadow: 5px 5px 5px 5px rgba(26, 151, 182, 0.25), 10px 10px 10px 10px rgba(255,255,255,0.5);
+				border-bottom-left-radius: 2em; 
+				border-bottom-right-radius: 2em; 
+				border-top-left-radius: 2em; 
+				border-top-right-radius: 2em; 
+				background-color:white;
+				position:absolute;
+				left:330px;top:80px;
+				text-align: center;
+				overflow: hidden;
+			}
+			.float0{
+				width:100px;
+				height:30px;
+				text-align: center;
+				color: rgb(0, 0, 0);
+				line-height:30px;
+				position:absolute;
+				left:0;
+				top:0;
+			}
+			.float1{
+				width:30px;
+				height:30px;
+				background-color: #1dbfdb;
+				position:absolute;
+				right:-30px;top:0;
+				color: white;
+			}
+			.find{
+				width: 170px;
+				height: 100px;
+				position: fixed;
+			}
+			.find>img{
+				display: block;
+				width: 170px;
+				height: 100px;
+			}
+			.find0{
+				width: 80px;
+				height: 20px;
+				position: absolute;
+			}
+			.text{
+				display: block;
+				width: 80px;
+				height: 20px;
+				text-align: center;
+				line-height: 20px;
+				color: #1dbfdb;
+				border: 1px dashed white;
+			}
+			.js{
+				width: 100%;
+				height: 200px;
+			}
+			.jss{
+				width: 1200px;
+				height: 200px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.jss0{
+				background-color: rgba(0,0,0,0.2);
+				font-size: 16px;
+				text-align: center;
+			}
+			.jss0>a{
+				color:white;
+				text-decoration: none;
+			}
+			.yjgl{
+				width: 1200px;
+				height: 25px;
+				margin: 15px auto;
+				position:  relative;
+				border-bottom: 1px solid rgb(0, 0, 0);
+
+			}
+			.yjgl>a{
+				display: block;
+				width: 150px;
+				height: 25px;
+				font-size: 14px;
+				position: absolute;
+				line-height: 25px;
+				text-decoration: none;
+				color: #1dbfdb;
+			}
+			.afterdh{
+				background-color: rgb(0, 0, 0);
+				opacity: 0;
+				position: absolute;
+			}
+			.ttip{
+				width: 1200px;
+				height: 20px;
+				margin: 0 auto;
+				position: relative;
+				margin-top: 20px;
+				margin-bottom: 10px;
+				border-bottom: 1px solid rgb(0, 0, 0);
+			}
+			.ttip>span{
+				display: block;
+				width: 200px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				position: absolute;
+				left: 500px;
+				color: #1dbfdb;
+				top: 0;
+				font-size: 17px;
+			}
+			.nav4{
+				position: absolute;
+				top:2350px;
+				width: 100%;
+				height: 200px;
+				background-image: url(bottom.jpg);
+				background-repeat: repeat;
+				background-position: center;
+			}
+			.bottom{
+				width: 100%;
+				height: 200px;
+				margin: 0 auto;
+				position: absolute;
+			}
+			.bottom>ul{
+				width: 480px;
+				height: 50px;
+				position: absolute;
+				left: 50%;
+				top: 50px;
+				transform: translateX(-50%);
+			}
+			.bottom>ul>li{
+				display: block;
+				color: white;
+				text-align: center;
+				line-height: 50px;
+				font-size: 15px;
+				width: 80px;
+				height: 50px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="first"></div>
+		<div class="big">
+			<div class="tip">
+            	<img src="img/20170830103834cd8c4b.png" alt="">
+            	<a class="gaga" href="../张子华/images/big1.html">
+					<div class="haha">
+					   <div></div>
+					</div>
+					<p >首页</p>
+					<div class="xixi">
+						<div></div>
+					</div>
+				</a>
+				<a class="gaga" href="../李宏超/李宏超/demo.html">
+					<div class="haha">
+					   <div></div>
+					</div>
+					<p>精选路线</p>
+					<div class="xixi">
+						<div></div>
+					</div>
+				</a>
+				<a class="gaga" href="../薛程元/旅游攻略.html">
+					<div  class="haha">
+					   <div></div>
+					</div>
+					<p>旅游攻略</p>
+					<div class="xixi">
+						<div></div>
+					</div>
+				</a>
+				<a class="gaga" href="../梁钰钊/新建文件夹 (2)/大作业.html">
+					<div class="haha">
+					   <div></div>
+					</div>
+					<p>游记</p>
+					<div class="xixi">
+						<div></div>
+					</div>
+				</a>
+				<a class="gaga" href="../柴林彤/大作业.html">
+					<div  class="haha">
+					   <div></div>
+					</div>
+					<p>在线预定</p>
+					<div class="xixi">
+						<div></div>
+					</div>
+				</a>
+				<a class="gaga" href="../孙金岩/shoufengqin.html">
+					<div class="haha">
+					   <div></div>
+					</div>
+					<p>关于我们</p>
+					<div class="xixi">
+						<div></div>
+					</div>
+				</a>
+        	</div>
+		</div>
+		<div class="nav-01">
+			<img src="img/201709161032481678ba.jpg">
+		</div>
+		<div class="nav01">
+			<div class="nav1">
+				<div class="title1">旅游攻略&nbsp/</div>
+				<div class="title2">TRAVEL GUIDES</div>
+			</div>
+		</div>
+		<div class="nav2">
+			<div class="move">
+				<div class="data" style="left:1200px;">
+					<div class="simg">
+						<div class="simg0">泰国普吉岛</div>
+						<img src="img/20170830154209f2c562.jpg">
+						<div class="simg1"><img src="img/zoom.png"></div>
+					</div>
+					<div class="place"><a href="####">泰国普吉岛</a></div>
+					<div class="way"><a href="###">【跟团游】泰国普吉岛+快艇游PP岛+送浮潜、入住温德姆度假村或国五酒店</a></div>
+					<div class="float">
+						<div class="float0">MORE</div>
+						<div class="float1">➜</div>
+					</div>
+				</div>
+			</div>
+			<div class="move">
+				<div class="data" style="left:-1200px;">
+					<div class="simg">
+						<div class="simg0">巴厘岛</div>
+						<img src="img/20170830112754899294.png">
+						<div class="simg1"><img src="img/zoom.png"></div>
+					</div>
+					<div class="place"><a href="####">巴厘岛</a></div>
+					<div class="way"><a href="###">【半自助游】经典低价！巴厘岛5天4晚！四星精品酒店+悬崖海景下午茶+玻璃底船+海龟岛</a></div>
+					<div class="float">
+						<div class="float0">MORE</div>
+						<div class="float1">➜</div>
+					</div>
+				</div>
+			</div>
+			<div class="move" >
+				<div class="data" style="left:1200px;">
+					<div class="simg">
+						<div class="simg0">迪拜</div>
+						<img src="img/20170830110115708071.png">
+						<div class="simg1"><img src="img/zoom.png"></div>
+					</div>
+					<div class="place"><a href="####">迪拜</a></div>
+					<div class="way"><a href="###">【跟团游】香港直飞迪拜6天游（阿拉伯午餐+火烈鸟+9元送长悍马/林肯豪车）</a></div>
+					<div class="float">
+						<div class="float0">MORE</div>
+						<div class="float1">➜</div>
+					</div>
+				</div>
+			</div>
+			<div class="move">
+				<div class="data" style="left:-1200px;">
+					<div class="simg">
+						<div class="simg0">三亚亚龙湾</div>
+						<img src="img/201708301654026814ea.png">
+						<div class="simg1"><img src="img/zoom.png"></div>
+					</div>
+					<div class="place"><a href="####">三亚亚龙湾</a></div>
+					<div class="way"><a href="###">【跟团游】半自助游：三亚180°海景房＋1晚升级亚龙湾酒店，全程自助早＋5大景点＋接送</a></div>
+					<div class="float">
+						<div class="float0">MORE</div>
+						<div class="float1">➜</div>
+					</div>
+				</div>
+			</div>
+			<div class="move">
+				<div class="data" style="left:1200px;">
+					<div class="simg">
+						<div class="simg0">泰国清迈</div>
+						<img src="img/20170830164842383925.png">
+						<div class="simg1"><img src="img/zoom.png"></div>
+					</div>
+					<div class="place"><a href="####">泰国清迈</a></div>
+					<div class="way"><a href="###">【自由行】火爆国庆小长假&泰国清迈5天4晚/6天5晚+莲花/富丽华酒店/夜市/拜县白庙</a></div>
+					<div class="float">
+						<div class="float0">MORE</div>
+						<div class="float1">➜</div>
+					</div>
+				</div>
+			</div>
+			<div class="move">
+				<div class="data" style="left:-1200px;">
+					<div class="simg">
+						<div class="simg0">马尔代夫</div>
+						<img src="img/20170830164215e7a049.png">
+						<div class="simg1"><img src="img/zoom.png"></div>
+					</div>
+					<div class="place"><a href="####">马尔代夫</a></div>
+					<div class="way"><a href="###">【尚·休闲】斯里兰卡、马尔代夫8天＊联游之旅＊＜享悠闲海岛假期，海边火车，高尔古堡，高跷渔夫＞</a></div>
+					<div class="float">
+						<div class="float0">MORE</div>
+						<div class="float1">➜</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="yjgl">
+			<a href="####" style="left:0;top:0;text-align: left;font-size: 20px">游记攻略</a>
+			<a href="####" style="right:0;top:0;text-align: right;">更多游记攻略>></a>
+		</div>
+		<div class="js">
+			<div class="jss">
+				<div class="dh" style="width:250px;height:200px;position:absolute;top:0px;left:0px;">
+					<div class="jss0"  style="width:250px;height:20px;position:absolute;left:0;top:180px;"><a href="###">青岛旅游景点</a></div>
+					<img style="display: block;width:250px;height:200px;" src="img/-01.jpg">
+					<div class="afterdh" style="width:250px;height:200px;top:0px;left:0px;"></div>
+				</div>
+				<div class="dh" style="width:245px;height:97.5px;position:absolute;top:0px;left:255px;">
+					<div class="jss0" style="width:245px;height:20px;position:absolute;left:0;top:77.5px;"><a href="###">哈尔滨旅游景点</a></div>
+					<img style="display: block;width:245px;height:100px;" src="img/-02.jpg">
+					<div class="afterdh" style="width:245px;height:100px;top:0px;left:0px;"></div>
+				</div>
+				<div class="dh" style="width:245px;height:97.5px;position:absolute;top:102.5px;left:255px;">
+					<div class="jss0" style="width:245px;height:20px;position:absolute;left:0;top:77.5px;"><a href="###">毕节旅游景点</a></div>
+					<img style="display: block;width:245px;height:97.5px;" src="img/-03.jpg">
+					<div class="afterdh" style="width:245px;height:97.5px;top:0px;left:0px;"></div>
+				</div>
+				<div class="dh" style="width:250px;height:200px;position:absolute;top:0px;left:505px;">
+					<div class="jss0" style="width:250px;height:20px;position:absolute;left:0;top:180px;"><a href="###">三亚旅游景点</a></div>
+					<img style="display: block;width:250px;height:200px;" src="img/-04.jpg">
+					<div class="afterdh" style="width:250px;height:200px;top:0px;left:0px;"></div>
+				</div>
+				<div class="dh" style="width:245px;height:97.5px;position:absolute;top:0px;left:760px;">
+					<div class="jss0" style="width:245px;height:20px;position:absolute;left:0;top:77.5px;"><a href="###">天安门旅游景点</a></div>
+					<img style="display: block;width:245px;height:97.5px;" src="img/-05.jpg">
+					<div class="afterdh" style="width:245px;height:97.5px;top:0px;left:0px;"></div>
+				</div>
+				<div class="dh" style="width:245px;height:97.5px;position:absolute;top:102.5px;left:760px;">
+					<div class="jss0" style="width:245px;height:20px;position:absolute;left:0;top:77.5px;"><a href="###">张家界旅游景点</a></div>
+					<img style="display: block;width:245px;height:97.5px;" src="img/-06.jpg">
+					<div class="afterdh" style="width:245px;height:97.5px;top:0px;left:0px;"></div>
+				</div>
+				<div class="dh" style="width:200px;height:200px;position:absolute;top:0px;left:1010px;">
+					<div class="jss0" style="width:200px;height:20px;position:absolute;left:0;top:180px;"><a href="###">珠海旅游景点</a></div>
+					<img style="display: block;width:200px;height:200px;" src="img/-07.jpg">
+					<div class="afterdh" style="width:200px;height:200px;top:0px;left:0px;"></div>
+				</div>
+			</div>
+		</div>
+		<div class="ttip"><span>更多景点等你选择</span></div>
+		<div class="nav3">
+			<div class="nav11"> <!-- 1200px,150px -->
+				<div class="tu">
+					<div><img src="img/20170830154209f2c562.jpg"></div>
+					<div><img src="img/20170830112754899294.png"></div>
+					<div><img src="img/20170830110115708071.png"></div>
+					<div><img src="img/201708301654026814ea.png"></div>
+					<div><img src="img/20170830164842383925.png"></div>
+					<div><img src="img/20170830164215e7a049.png"></div>
+					<div><img src="img/20170830154209f2c562.jpg"></div>
+					<div><img src="img/20170830112754899294.png"></div>
+					<div><img src="img/20170830110115708071.png"></div>
+					<div><img src="img/201708301654026814ea.png"></div>
+					<div><img src="img/20170830164842383925.png"></div>
+					<div><img src="img/20170830164215e7a049.png"></div>
+				</div>
+			</div>
+		</div>
+		<div class="nav4">
+			<div class="bottom">
+				<ul>
+					<li style="text-align: right;">首页&nbsp&nbsp|&nbsp</li>
+					<li>&nbsp;精选路线&nbsp;&nbsp;|</li>
+					<li>&nbsp;旅游攻略&nbsp;&nbsp;|</li>
+					<li>&nbsp;游记&nbsp;&nbsp;|</li>
+					<li>&nbsp;在线预定&nbsp;&nbsp;|</li>
+					<li style="text-align: left;">&nbsp;关于我们</li>
+				</ul>
+				<div style="font-size: 14px;color:white;width:400px;height:20px;position:absolute;left:50%;transform: translateX(-50%);top:100px;text-align:center;line-height: 15px;">公司版权所有2001-2017   经营许可证：2233668822</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//dh
+		var gar = document.getElementsByClassName("dh");
+		var garh = document.getElementsByClassName("afterdh");
+		for(var i=0;i<gar.length;i++){
+			gar[i].onmouseover = function(){
+				this.children[2].style.opacity = "0.6";
+			}
+		}
+		for(var i=0;i<gar.length;i++){
+			gar[i].onmouseout = function(){
+				this.children[2].style.opacity = "0";
+			}
+		}
+		//景区鼠标移动
+		var nav11 = document.getElementsByClassName("nav01");
+		var move = document.getElementsByClassName("move");
+		nav11[0].onmouseover = function(){
+			animate(move[0].children[0],{left:0},8);
+			setTimeout(function(){
+				animate(move[1].children[0],{left:0},15);
+			},100);
+			setTimeout(function(){
+				animate(move[2].children[0],{left:0},15);
+			},200);
+			setTimeout(function(){
+				animate(move[3].children[0],{left:0},15);
+			},300);
+			setTimeout(function(){
+				animate(move[4].children[0],{left:0},15);
+			},400);
+			setTimeout(function(){
+				animate(move[5].children[0],{left:0},15);
+			},500);
+		}
+		//animate
+		function getStyle(obj, attr){
+        	if(obj.currentStyle){
+           		 return obj.currentStyle[attr];
+        	} else {
+            	return getComputedStyle(obj, null)[attr];
+        	}
+   	    }
+    	function animate(obj,json,spe,callback){
+        	clearInterval(obj.timer);
+        	obj.timer = setInterval(function(){
+            	var isStop = true;
+            	for(var attr in json){
+                	var now = 0;
+                	if(attr == 'opacity'){
+                    	now = parseInt(getStyle(obj,attr)*100);
+                	}else{
+                    	now = parseInt(getStyle(obj,attr));
+                	}
+                	var speed = (json[attr] - now) / spe;
+                	speed = speed>0?Math.ceil(speed):Math.floor(speed);
+                	var cur = now + speed;
+                	if(attr == 'opacity'){
+                    	obj.style[attr] = cur / 100;
+                	}else{
+                    	obj.style[attr] = cur + 'px';
+                	}
+                	if(json[attr] !== cur){
+                    	isStop = false;
+                	}
+            	}
+            	if(isStop){
+               	 	clearInterval(obj.timer);
+                	callback&&callback();
+            	}
+        	}, 30)
+    	}
+    	//列表动画
+		var gaga = document.getElementsByClassName("gaga");
+		gaga[2].children[0].children[0].style.left="10px";
+		gaga[2].children[2].children[0].style.right="10px";
+		gaga[2].children[1].style.color="white";
+    	for(var i =0 ;i<gaga.length;i++){
+        	gaga[i].onmouseover=function(){
+            	this.children[0].children[0].style.opacity="1";
+            	this.children[2].children[0].style.opacity="1";
+            	animate(this.children[0].children[0],{left:10},4);
+            	animate(this.children[2].children[0],{right:10},4);
+            	this.children[1].style.color="white";
+        	}
+    	}
+    	for(var i =0 ;i<gaga.length;i++){
+			if(i!=2){
+				gaga[i].onmouseout=function(){
+            	animate(this.children[0].children[0],{left:40,opacity:0},4);
+            	animate(this.children[2].children[0],{right:40,opacity:0},4);
+            	this.children[1].style.color="black";
+        	}
+			}
+        	
+    	}
+    	//
+    	var float = document.getElementsByClassName("float");
+    	var float0 = document.getElementsByClassName("float0");
+    	var float1 = document.getElementsByClassName("float1");
+    	for(var i=0;i<float.length;i++){
+    		float[i].onmouseover = function(){
+    			this.children[0].style.color = "#1dbfdb";
+    			this.children[0].style.left = -30 + "px";
+    			this.children[1].style.right = 0 + "px";
+    		}
+    	}
+    	for(var j=0;j<float.length;j++){
+    		float[j].onmouseout=function(){
+    			this.children[0].style.color = "gray";
+    			this.children[0].style.left = 0 + "px";
+    			this.children[1].style.right = -30 + "px";
+    		}
+    	}
+    	//图片动画
+    	var imgs = document.getElementsByClassName("simg");
+    	var count0=0;
+    	for(var i=0;i<imgs.length;i++){
+    		imgs[i].onmouseover = function(){
+    			animate(this.children[0],{top:0},8);
+    			animate(this.children[2],{top:75},8);
+    		}
+    	}
+    	for(var i=0;i<imgs.length;i++){
+    		imgs[i].onmouseout = function(){
+    			animate(this.children[0],{top:-75},8);
+    			animate(this.children[2],{top:150},8);
+    		}
+    	}
+    	//轮播图
+    	var silder = document.getElementsByClassName("nav11")[0];
+    	var silde = document.getElementsByClassName("tu");
+    	var count=0;
+    	var timer = setInterval(function(){
+    		if(count!= -1500){
+    			silde[0].style.left = count + "px";
+    			count--;
+    		}else{
+    			count=0;
+    		}
+    	},30);
+	</script>
+</html>
