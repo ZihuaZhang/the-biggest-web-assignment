@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+</head>
+<style>
+    body{
+	background-image: url(bg.jpg) ;
+    background-size: 100%;
+    
+}
+    a{
+        color: black;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .big{
+        background-color: rgba(255,255, 255, 0.8);
+        position: fixed;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100px;
+    }
+    .nav{
+        position: absolute;
+        top: 0px;
+        left:50%;
+        transform:translateX(-50%);
+        width: 1200px;
+        height:80px;
+        margin:0 auto;
+        padding-top:20px;
+        z-index: 10;
+    }
+    .nav>a{
+        display: inline-block;
+        cursor:pointer;
+        width: 150px;
+        height:50px;
+        text-align: center;
+        position: relative;
+    }
+    .nav>a>p{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        z-index:3;
+    }
+    .haha{
+        position:absolute;
+        width:75px;
+        height:50px;
+        overflow:hidden;
+        left:0px;
+        top:0px;
+        z-index:1;            
+    }
+    .xixi{
+        position:absolute;
+        width:75px;
+        height:50px;
+        overflow:hidden;
+        right:0px;
+        top:0px;
+        z-index:1;  
+    }
+    .haha>div{
+        width:90px;
+        height:50px;
+        background-color: skyblue;
+        border-top-left-radius: 2em 2em;
+        border-bottom-left-radius: 2em 2em;
+        position:absolute;
+        left:90px;
+    }
+    .xixi>div{
+        width:90px;
+        height:50px;
+        background-color: skyblue;
+        border-top-right-radius: 2em 2em;
+        border-bottom-right-radius: 2em 2em;
+        position:absolute;
+        right:90px;
+    }    
+    .shou{
+        margin: 100px auto;
+        position: relative;
+        width: 1400px;
+        height: 450px;
+        overflow: hidden;
+    }
+    .qin{
+        position: absolute;
+        width: 1200px;
+        height: 400px;
+        overflow: hidden;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .qin>img{
+        width: 1200px;
+        height: 400px;
+    }
+    .h0{
+        width: 500px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+    .h0>p{
+        color: black;
+        font-size: 30px;
+        text-align: center;
+    }
+    .ourcervice{
+        width:1200px;
+        margin:0 auto;
+    }
+    .ourcervice_small{
+        margin-left: 80px;
+        position: relative;
+        width: 200px;
+        height: 350px;
+        display: inline-block;
+/*         top: -7px; */
+        /* background-color: red; */
+    }
+    .ourcervice_small>img{
+        padding-top:7px;
+        display: block;
+        margin: 0 auto;
+    }
+    .ourcervice_small>p{
+        padding-top: 5px;
+        color: grey;
+       text-align: center;
+    }
+    .bottom0{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .bottom0>div{
+        width: 400px;height: 300px;
+        float: left;
+    }
+    .bottom0>div>p{
+        margin-top: 170px;
+        text-align: center;
+    }
+    .nav4{
+        position: absolute;
+        top:1900px;
+        width: 100%;
+        height: 200px;
+        background-image: url(bottom.jpg);
+        background-repeat: repeat;
+        background-position: center;
+    }
+    .bottom{
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        position: absolute;
+    }
+    .bottom>ul{
+        width: 480px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        transform: translateX(-50%);
+    }
+    .bottom>ul>li{
+        display: block;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        font-size: 15px;
+        width: 80px;
+        height: 50px;
+        float: left;
+    }
+</style>
+<body>
+    <div class="big" >
+        <div class="nav">
+            <img src="logo.png" alt="">
+            <a class="gaga" href="../张子华/images/big1.html">
+                <div class="haha">
+                   <div></div>
+                </div>
+                <p >首页</p>
+                <div class="xixi">
+                    <div></div>
+                </div>
+            </a>
+            <a class="gaga" href="../李宏超/李宏超/demo.html">
+                <div class="haha">
+                   <div></div>
+                </div>
+                <p>精选路线</p>
+                <div class="xixi">
+                    <div></div>
+                </div>
+            </a>
+            <a class="gaga" href="../薛程元/旅游攻略.html">
+                <div  class="haha">
+                   <div></div>
+                </div>
+                <p>旅游攻略</p>
+                <div class="xixi">
+                    <div></div>
+                </div>
+            </a>
+            <a class="gaga" href="../梁钰钊/新建文件夹 (2)/大作业.html">
+                <div class="haha">
+                   <div></div>
+                </div>
+                <p>游记</p>
+                <div class="xixi">
+                    <div></div>
+                </div>
+            </a>
+            <a class="gaga" href="../柴林彤/大作业.html">
+                <div  class="haha">
+                   <div></div>
+                </div>
+                <p>在线预定</p>
+                <div class="xixi">
+                    <div></div>
+                </div>
+            </a>
+            <a class="gaga" href="../孙金岩/shoufengqin.html">
+                <div class="haha">
+                   <div></div>
+                </div>
+                <p>关于我们</p>
+                <div class="xixi">
+                    <div></div>
+                </div>
+            </a>
+        </div>
+    </div>
+        <div class="shou">
+            <div class="qin" style="z-index: 1;"><img src="b1.jpg" alt=""></div>
+            <div class="qin" style="z-index: 2;"><img src="b2.jpg" alt=""></div>
+            <div class="qin" style="z-index: 3;"><img src="b3.jpg" alt=""></div>
+        </div>
+        <div>
+            <div class="h0" id="about0">
+                <p>关于我们/ABOUT US</p>
+            </div>
+            <div style="width: 1200px;height: 500px;margin:0 auto;">
+                <div style="float: left;width: 700px;height: 500px;word-wrap:break-word;">
+                    <p style="font-size: large;color: skyblue;">景点 · 中山路 </p><br>
+                    <p>中山路位于厦门岛西南部，是厦门市思明区中华街道的一条东西走向的道路。日据时代称为大汉路（1933年－1945年），文革时期称为东方红路。中山路长约1.2公里，西起轮渡鹭江道，中跨思明南路与思明北路的分界点，东达新华路（即今厦门市公安局，原厦门市工人文化宫所在地）与公园南路相连。 中山路始建于1925年，连接了中山公园和鼓浪屿两个重要景区。沿街均为闽南风格的骑楼建筑，自2006年起以“旧城中山路历史风貌街区”的名义受《厦门市紫线控制专项规划》保护，严禁大面积拆除、开发活动。 中山路沿线是厦门商业的发源地，是厦门市最繁华的商圈之一，在旧城街区仍然保留着较完整的近代历史风貌。由于走到底就是厦门轮渡码头，很多去鼓浪屿的游客，会顺带来逛一下，这里遍布各种厦门小吃、特色商店和酒吧等，是吃货们的朝拜圣地。 </p>
+                </div>
+                
+                <img style="float: right;width: 407px;height: 382px;" src="b4.jpg">
+            </div>
+        </div>
+        <div>
+            <div class="h0" id="about1">
+                <p>我们的服务/OUR CERVICE</p>
+            </div>
+            <div class="ourcervice">
+                <div class="ourcervice_small" id="ourcervice_small">
+                    <img src="旅行.png">
+                    <p>Safari</p>
+                    <p>旅行</p>
+                </div>
+                <div class="ourcervice_small" id="ourcervice_small1">
+                    <img src="乘船游览.png">
+                    <p>Cruise</p>
+                    <p>乘船游览</p>
+                </div>
+                <div class="ourcervice_small"  id="ourcervice_small2">
+                    <img src="城市优惠.png">
+                    <p>City Breaks</p>
+                    <p>城市优惠</p>
+                </div>
+                <div class="ourcervice_small" id="ourcervice_small3">
+                    <img src="活动.png">
+                    <p>Adventure</p>
+                    <p>活动</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom0">
+            <div>
+                <p>联系电话：0000-0000</p>
+            </div>
+            <div>
+                <img style="width: 200px;height: 200px;" src="二维码.jpg">
+            </div>
+            <div>
+                <p>公司地址：河北师范大学软件学院&nbsp诚朴园工作室</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav4">
+        <div class="bottom">
+            <ul>
+				<li style="text-align: right;">首页&nbsp&nbsp|&nbsp</li>
+				<li>&nbsp;精选路线&nbsp;&nbsp;|</li>
+				<li>&nbsp;旅游攻略&nbsp;&nbsp;|</li>
+				<li>&nbsp;游记&nbsp;&nbsp;|</li>
+				<li>&nbsp;在线预定&nbsp;&nbsp;|</li>
+				<li style="text-align: left;">&nbsp;关于我们</li>
+			</ul>
+            <div style="font-size: 14px;color:white;width:400px;height:20px;position:absolute;left:50%;transform: translateX(-50%);top:100px;text-align:center;line-height: 15px;">公司版权所有2001-2017   经营许可证：2233668822</div>
+        </div>
+    </div>
+
+    
+</body>
+<script>
+    function getStyle(obj, attr){
+        if(obj.currentStyle){
+            return obj.currentStyle[attr];
+        } else {
+            return getComputedStyle(obj, null)[attr];
+        }
+    }
+    function animate(obj,json,callback){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+            var isStop = true;
+            for(var attr in json){
+                var now = 0;
+                if(attr == 'opacity'){
+                    now = parseInt(getStyle(obj,attr)*100);
+                }else{
+                    now = parseInt(getStyle(obj,attr));
+                }
+                var speed = (json[attr] - now) / 8;
+                speed = speed>0?Math.ceil(speed):Math.floor(speed);
+                var cur = now + speed;
+                if(attr == 'opacity'){
+                    obj.style[attr] = cur / 100;
+                }else{
+                    obj.style[attr] = cur + 'px';
+                }
+                if(json[attr] !== cur){
+                    isStop = false;
+                }
+            }
+            if(isStop){
+                clearInterval(obj.timer);
+                callback&&callback();
+            }
+        }, 30)
+    }
+    var gaga = document.getElementsByClassName("gaga");
+    gaga[5].children[0].children[0].style.left="10px";
+    gaga[5].children[2].children[0].style.right="10px";
+    gaga[5].children[1].style.color="white";
+    for(var i =0 ;i<gaga.length;i++){
+        gaga[i].onmouseover=function(){
+            this.children[0].children[0].style.opacity="1";
+            this.children[2].children[0].style.opacity="1";
+            animate(this.children[0].children[0],{left:10});
+            animate(this.children[2].children[0],{right:10});
+            this.children[1].style.color="white";
+        }
+
+    }
+    for(var i =0 ;i<gaga.length&&i!=5;i++){
+        gaga[i].onmouseout=function(){
+            animate(this.children[0].children[0],{left:40,opacity:0});
+            animate(this.children[2].children[0],{right:40,opacity:0});
+            this.children[1].style.color="black";
+        }
+
+    }
+
+
+    
+    var index=0;
+    var qin = document.getElementsByClassName("qin");
+    qin[0].style.left="0px";
+    qin[1].style.left="1200px";
+    qin[2].style.left="1300px";
+    qin[1].onmouseover=function(){
+        animate(this,{left:100});
+        animate(this.nextElementSibling,{left:1300});
+        index=1;
+    };
+    qin[2].onmouseover=function(){
+        animate(this,{left:200});
+        animate(this.parentNode.children[1],{left:100});
+        index=2;
+    };
+    qin[0].onmouseover=function(){
+        animate(this.parentNode.children[1],{left:1200});
+        animate(this.parentNode.children[2],{left:1300});
+        index=0;
+    };
+    
+    setInterval(function(){
+        if(index==0){
+            animate(qin[1],{left:1200});
+            animate(qin[2],{left:1300});
+        }    
+        else if(index==1){
+            animate(qin[1],{left:100});
+            animate(qin[2],{left:1300});
+        }
+        else if(index==2){
+            animate(qin[2],{left:200});
+            animate(qin[1],{left:100});
+        }
+        index=(index+1)%3;
+        },3000
+    );
+    
+
+    var changeColor0=document.getElementById("about0");
+    changeColor0.onmouseover=function(){
+        changeColor0.setAttribute("background-color","blue");
+    }
+
+    var timer;
+    var ourcervice_small=document.getElementById("ourcervice_small");
+    var ourcervice_small1=document.getElementById("ourcervice_small1");
+    var ourcervice_small2=document.getElementById("ourcervice_small2");
+    var ourcervice_small3=document.getElementById("ourcervice_small3");
+    function doing1(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+                var now = parseInt(getStyle(ourcervice_small,"top"));
+                if(now == -7){
+                    clearInterval(timer);
+                }else{
+                    ourcervice_small.style.top = now - 1 + "px";
+                }
+            },30);
+      }
+    function doing2(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+                var now = parseInt(getStyle(ourcervice_small,"top")); 
+                if(now == 0){
+                    clearInterval(timer);
+                }else{
+                    ourcervice_small.style.top = now + 1 + "px";
+                }
+            },30);
+      }
+      function doing3(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+                var now = parseInt(getStyle(ourcervice_small1,"top"));
+                if(now == -7){
+                    clearInterval(timer);
+                }else{
+                    ourcervice_small1.style.top = now - 1 + "px";
+                }
+            },30);
+      }
+    function doing4(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+                var now = parseInt(getStyle(ourcervice_small1,"top")); 
+                if(now == 0){
+                    clearInterval(timer);
+                }else{
+                    ourcervice_small1.style.top = now + 1 + "px";
+                }
+            },30);
+      }
+      function doing5(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+                var now = parseInt(getStyle(ourcervice_small2,"top"));
+                if(now == -7){
+                    clearInterval(timer);
+                }else{
+                    ourcervice_small2.style.top = now - 1 + "px";
+                }
+            },30);
+      }
+    function doing6(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+                var now = parseInt(getStyle(ourcervice_small2,"top")); 
+                if(now == 0){
+                    clearInterval(timer);
+                }else{
+                    ourcervice_small2.style.top = now + 1 + "px";
+                }
+            },30);
+      }
+      function doing7(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+                var now = parseInt(getStyle(ourcervice_small3,"top"));
+                if(now == -7){
+                    clearInterval(timer);
+                }else{
+                    ourcervice_small3.style.top = now - 1 + "px";
+                }
+            },30);
+      }
+    function doing8(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+                var now = parseInt(getStyle(ourcervice_small3,"top")); 
+                if(now == 0){
+                    clearInterval(timer);
+                }else{
+                    ourcervice_small3.style.top = now + 1 + "px";
+                }
+            },30);
+      }
+    ourcervice_small.setAttribute("onmouseover", "doing1()");
+    ourcervice_small.setAttribute("onmouseout", "doing2()");
+    ourcervice_small1.setAttribute("onmouseover", "doing3()");
+    ourcervice_small1.setAttribute("onmouseout", "doing4()");
+    ourcervice_small2.setAttribute("onmouseover", "doing5()");
+    ourcervice_small2.setAttribute("onmouseout", "doing6()");
+    ourcervice_small3.setAttribute("onmouseover", "doing7()");
+    ourcervice_small3.setAttribute("onmouseout", "doing8()");
+
+
+</script>
+</html>
