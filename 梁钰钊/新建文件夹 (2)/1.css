@@ -1,0 +1,250 @@
+/*
+* @Author: hp
+* @Date:   2019-12-19 21:28:22
+* @Last Modified by:   hp
+* @Last Modified time: 2019-12-24 21:00:18
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(bg.jpg) ;
+    background-size: 100%;
+    
+}
+ul,li,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+.big{
+	position: fixed;
+	height: 100px;
+	width: 100%;
+	background-color: rgba(255,255, 255, 0.5);
+	z-index: 4;
+}
+.nav{
+   	position: absolute;
+    left:50%;
+    top: 0px;
+    transform:translateX(-50%);
+    width: 1200px;
+    height:80px;
+    margin:0 auto;
+    padding-top:20px;
+    z-index: 4;
+}
+.nav>img{
+	padding-bottom: 5px;
+}
+.nav>a{
+    display: inline-block;
+    cursor:pointer;
+    width: 150px;
+    height:50px;
+    text-align: center;
+    position: relative;
+}
+.nav>a>p{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:3;
+}
+.haha{
+    position:absolute;
+    width:75px;
+    height:50px;
+    overflow:hidden;
+    left:0px;
+    top:0px;
+    z-index:1;            
+}
+.xixi{
+    position:absolute;
+    width:75px;
+    height:50px;
+    overflow:hidden;
+    right:0px;
+    top:0px;
+    z-index:1;  
+}
+.haha>div{
+    width:90px;
+    height:50px;
+    background-color: skyblue;
+    border-top-left-radius: 2em 2em;
+    border-bottom-left-radius: 2em 2em;
+    position:absolute;
+    left:90px;
+}
+.xixi>div{
+    width:90px;
+    height:50px;
+    background-color: skyblue;
+    border-top-right-radius: 2em 2em;
+    border-bottom-right-radius: 2em 2em;
+    position:absolute;
+    right:90px;
+}
+.button{
+	padding-top: 100px;
+	height: 125px;
+	width: 1200px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.button1{
+	margin-top: 5px;
+	height: 120px;
+	width: 300px;
+ 	background-color: rgb(126,204,243); 
+	margin-right: 5px;
+	position: absolute;
+	z-index: 3;
+	cursor: pointer;
+}
+.button2{
+	position: absolute;
+	width: 300px;
+	top: 180px;
+	height: 39px;
+	z-index: 1;
+	background-color: slategray;
+}
+.button2>p{
+	text-align: center;
+	line-height: 38px;
+	font-size: 20px;
+	color: white;
+	height: 38px;
+}
+.p1{
+	text-align: center;
+	font-size: 30px;
+	padding-top: 15px;
+	font-size: 50px;
+	color:white;
+}
+.p2{
+	text-align: center;
+	font-size: 30px;
+}
+.pic{
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	height: 600px;
+	width: 1200px;
+	overflow: hidden;
+}
+.pic2{
+	width: 9000px;
+	position: absolute;
+	left: -1200px;
+}
+.pic22{
+	width: 1200px;
+	overflow: hidden;
+	float: left;
+}
+.pic22>img{
+	height: 500px;
+	width: 1200px;
+}
+.youji{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 43px;
+	position: relative;
+}
+.youji1{
+	font-size: 30px;
+}
+.youji2{
+	font-size: 28px; color:gray;
+}
+.box{
+	height: 600px;
+}
+.box1{
+	height: 150px;
+	width: 1300px;
+	position: absolute; 
+	left: 50%;
+	transform: translateX(-50%);
+}
+.box11{
+	float: left;
+	height: 300px;
+}
+.onetitle{
+	padding-top: 10px;
+	color: rgb(110, 179, 187);
+	font-weight: bolder;
+}
+.twotitle{
+	font-size: 10px;
+	padding-top: 5px;
+	color: black;
+}
+.img{
+	width: 300px;
+	height: 150px;
+	padding-right:20px;
+}
+.box{
+	position: relative;
+}
+.box2{
+	padding-top:300px;
+	position: absolute; 
+	left: 50%;
+	transform: translateX(-50%);
+	height: 300px;
+	width: 1300px;
+}
+.box22{
+	float: left;
+	height: 300px;
+}
+ 
+.nav4{
+    position: absolute;
+    top:1700px;
+    width: 100%;
+    height: 200px;
+    background-image: url(bottom.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+.bottom{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    position: absolute;
+}
+.bottom>ul{
+    width: 480px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+}
+.bottom>ul>li{
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    width: 80px;
+    height: 50px;
+    float: left;
+}
